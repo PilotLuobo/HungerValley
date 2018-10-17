@@ -5,58 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>这是一个简历！</title>
+    <script src="//at.alicdn.com/t/font_877832_nvqpqhigve.js"></script>
+    <style type="text/css">
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
     <link rel="stylesheet" href="./a.css" class="style">
 </head>
 
 <body>
-<div class="topNavBar clearfix">
-    <a href="#" class="logo" alt="logo" style="float: left;">
-        <span class="rs">RS</span><span class="card">card</span>
-    </a>
-    <nav style="float: right;">
-        <ul class="clearfix">
-            <li><a href="#">关于我</a></li>
-            <li><a href="#">技能</a></li>
-            <li><a href="#">工作经历</a></li>
-            <li><a href="#">个人博客</a></li>
-            <li><a href="#">联系方式</a></li>
-            <li><a href="#">作品集</a></li>
-        </ul>
-    </nav>
+<div class="topNavBar">
+    <div class="topNavBar-inner clearfix">
+        <a href="#" class="logo" alt="logo" style="float: left;">
+            <span class="rs">RS</span><span class="card">card</span>
+        </a>
+        <nav style="float: right;">
+            <ul class="clearfix">
+                <li><a href="#">关于我</a></li>
+                <li><a href="#">技能</a></li>
+                <li><a href="#">工作经历</a></li>
+                <li><a href="#">个人博客</a></li>
+                <li><a href="#">联系方式</a></li>
+                <li><a href="#">作品集</a></li>
+            </ul>
+        </nav>
+    </div>
+
 </div>
-<div class="banner" style="background-image: url(#)"></div>
+<div class="banner">
+    <div class="mask">
+    </div>
+</div>
 <main>
-    <div class="card">
-        <div class="PictureAndText">
+    <div class="userCard">
+        <div class="PictureAndText clearfix">
             <div class="picture">
-                <img src="#" alt="头像">
+                <img src="./img/head.jpg" width="299px" height="347px" alt="头像">
             </div>
             <div class="text">
-                <div class="profile">
-                    <span class="welcome">雷猴啊</span>
-                    <h1>萝卜</h1>
-                    <p>前端学习生</p>
-                    <hr>
-                    <dl>
-                        <dt>年龄</dt>
-                        <dd>7</dd>
-                        <dt>居住地</dt>
-                        <dd>电信八区</dd>
-                        <dt>联系方式</dt>
-                        <dd>意念交流</dd>
-                        <dt>邮箱地址</dt>
-                        <dd>TAT QAQ</dd>
-                    </dl>
-                </div>
+                <span class="welcome">雷猴啊
+                    <span class="triangle"></span>
+                </span>
+                <h1>萝卜</h1>
+                <p>前端学习生</p>
+                <hr>
+                <dl>
+                    <dt>年龄</dt>
+                    <dd>7</dd>
+                    <dt>居住地</dt>
+                    <dd>电信八区</dd>
+                    <dt>联系方式</dt>
+                    <dd>意念交流</dd>
+                    <dt>邮箱地址</dt>
+                    <dd>TAT QAQ</dd>
+                </dl>
             </div>
         </div>
         <footer class="media">
-            <a href="#"><img src="#" alt="..."></a>
-            <a href="#"><img src="#" alt="..."></a>
-            <a href="#"><img src="#" alt="..."></a>
-            <a href="#"><img src="#" alt="..."></a>
-            <a href="#"><img src="#" alt="..."></a>
-            <a href="#"><img src="#" alt="..."></a>
+            <a href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shejiaoweixin"></use>
+                </svg>
+            </a>
+            <a href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shejiaoweibo"></use>
+                </svg>
+            </a>
+            <a href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shejiaomomotubiao"></use>
+                </svg>
+            </a>
+            <a href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shejiaomiliao"></use>
+                </svg>
+            </a>
+            <a href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shejiaodingding"></use>
+                </svg>
+            </a>
+            <a href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-shejiaoqq"></use>
+                </svg>
+            </a>
         </footer>
     </div>
 
