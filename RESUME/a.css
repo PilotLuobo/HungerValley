@@ -80,14 +80,14 @@ a {
 }
 
 .banner {
-    height: 600px;
+    height: 515px;
     background-image: url(./img/wallhaven-699897.jpg);
     background-position: center top;
     background-size: cover;
 }
 
 .banner .mask {
-    height: 600px;
+    height: 515px;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -182,7 +182,7 @@ hr {
     margin: 16px;
 }
 
-.userCard footer.media > a:hover{
+.userCard footer.media > a:hover {
     background: #CF5D5F;
 }
 
@@ -191,4 +191,25 @@ hr {
     height: 30px;
     fill: white;
     vertical-align: top;
+}
+
+main {
+    margin-top: -340px;
+}
+
+body > main .dlresumet-wrapper {
+    text-align: center;
+}
+
+body > main .dlresumet {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 21px 55px;
+    display: inline-block;
+    border:1px solid #CDCFD1;
+    background: #EFEFEF;
+    border-radius: 5px;
+    color: #3d4451;
+    font-weight: bold;
+    margin: 32px 0;
 }
