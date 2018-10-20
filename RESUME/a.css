@@ -298,6 +298,7 @@ section.skills .progressBar .progress {
 
 section.portfoilo {
     text-align: center;
+    margin-bottom: 100px;
 }
 
 section.portfoilo > nav {
@@ -324,7 +325,7 @@ section.portfoilo nav .bar {
     height: 5px;
     background-color: white;
     margin-top: 5px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     border-radius: 10px;
 }
 
@@ -341,7 +342,6 @@ section.portfoilo nav .bar.state-1 .bar-inner {
     width: 33px;
 }
 
-
 section.portfoilo nav .bar.state-2 .bar-inner {
     margin-left: 70px;
     width: 35px;
@@ -351,7 +351,40 @@ section.portfoilo nav .bar.state-3 .bar-inner {
     margin-left: 142px;
     width: 34px;
 }
+
 section.portfoilo nav {
     display: inline-block;
     vertical-align: text-top;
+}
+
+section.portfoilo .works {
+    position: relative;
+    height: 546px;
+}
+
+section.portfoilo .works .work1,
+section.portfoilo .works .work2,
+section.portfoilo .works .work3,
+section.portfoilo .works .work4 {
+    position: absolute;
+}
+
+section.portfoilo .works .work1 {
+    top: 0px;
+    left: 0px;
+}
+
+section.portfoilo .works .work2 {
+    top: 0px;
+    left: 490px;
+}
+
+section.portfoilo .works .work3 {
+    top: 293px;
+    left: 0px;
+}
+
+section.portfoilo .works .work4 {
+    top: 293px;
+    left: 490px;
 }
