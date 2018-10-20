@@ -3,6 +3,14 @@
     padding: 0px;
 }
 
+ul, ol {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
 body {
     background-color: #EFEFEF;
     margin: 0;
@@ -97,6 +105,7 @@ a {
     margin-left: auto;
     margin-right: auto;
     background-color: #FFFFFF;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .userCard .welcome {
@@ -132,6 +141,7 @@ a {
     float: left;
     margin-left: 62px;
     width: 400px;
+    font-family: cursive;
 }
 
 hr {
@@ -154,7 +164,7 @@ hr {
 
 .userCard dl dt, dd {
     float: left;
-    padding: 5px 0;
+    padding: 6px 0;
 }
 
 .userCard dl dt {
@@ -206,10 +216,142 @@ body > main .dlresumet {
     line-height: 16px;
     padding: 21px 55px;
     display: inline-block;
-    border:1px solid #CDCFD1;
+    border: 1px solid #CDCFD1;
     background: #EFEFEF;
     border-radius: 5px;
     color: #3d4451;
     font-weight: bold;
     margin: 32px 0;
+    transition: box-shadow 0.3s;
+}
+
+.dlresumet:hover {
+    box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.5);
+}
+
+.selfIntroduction {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: cursive;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+section.skills,
+section.portfoilo {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+section.skills > h2,
+section.portfoilo > h2 {
+    text-align: center;
+    color: #3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+section.skills h3 {
+    font-size: 14px;
+    line-height: 1.1;
+    padding-right: 40px;
+}
+
+section.skills > ol {
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.5);
+    padding: 42px 50px 10px;
+    margin-top: 30px;
+}
+
+section.skills > ol > li {
+    float: left;
+    width: 48%;
+}
+
+section.skills > ol > li:nth-child(even) {
+    float: right;
+}
+
+section.skills .progressBar {
+    height: 5px;
+    background-color: #fce2df;
+    border-radius: 10px;
+    margin: 4px 0 40px 0;
+}
+
+section.skills .progressBar .progress {
+    height: 100%;
+    background-color: red;
+    width: 50%;
+    border-radius: 10px;
+}
+
+section.portfoilo {
+    text-align: center;
+}
+
+section.portfoilo > nav {
+    text-align: center;
+    margin-top: 32px;
+}
+
+section.portfoilo > nav > ol {
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+section.portfoilo > nav > ol > li {
+    float: left;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+section.portfoilo > nav > ol > li:nth-child(1) {
+    margin-left: 0;
+}
+
+section.portfoilo nav .bar {
+    height: 5px;
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 100px;
+    border-radius: 10px;
+}
+
+section.portfoilo nav .bar .bar-inner {
+    height: 100%;
+    background-color: #E6686A;
+    width: 10%;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+section.portfoilo nav .bar.state-1 .bar-inner {
+    margin-left: 0px;
+    width: 33px;
+}
+
+
+section.portfoilo nav .bar.state-2 .bar-inner {
+    margin-left: 70px;
+    width: 35px;
+}
+
+section.portfoilo nav .bar.state-3 .bar-inner {
+    margin-left: 142px;
+    width: 34px;
+}
+section.portfoilo nav {
+    display: inline-block;
+    vertical-align: text-top;
 }

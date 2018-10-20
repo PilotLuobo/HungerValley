@@ -50,17 +50,17 @@
                 <span class="welcome">Hello
                     <span class="triangle"></span>
                 </span>
-                <h1>张圳烽</h1>
+                <h1>张 圳 烽</h1>
                 <p>前端工程师</p>
                 <hr>
                 <dl>
-                    <dt>年龄</dt>
+                    <dt>年 龄</dt>
                     <dd>24</dd>
                     <dt>毕业院校</dt>
                     <dd>南京工业大学</dd>
-                    <dt>专业</dt>
+                    <dt>专 业</dt>
                     <dd>土木工程</dd>
-                    <dt>现居地</dt>
+                    <dt>现 居 地</dt>
                     <dd>南京 浦口区</dd>
                     <dt>联系方式</dt>
                     <dd>17694861229</dd>
@@ -106,30 +106,98 @@
         <a href="#" class="dlresumet" target="_blank" download>下载PDF版简历</a>
     </p>
 
-    <p>
-        萝卜君，前端实习，资深摸鱼员工，现在在大唐江湖担任机械师。<br>
-        技能：请假，肚子疼，我打游戏贼6！
+    <p class="selfIntroduction">
+        张圳烽，曾为工程造价员，现投身于伟大的coding事业。<br>
+        先后工作于中南、龙信，有十分丰富的摸鱼经验。
     </p>
 </main>
-<section>
+<section class="skills">
     <h2>技 能</h2>
-    <ol>
-        <li>剑 网 3 &amp; 秋 秋 飞 车</li>
-        <li>血 源</li>
-        <li>黑 暗 之 魂</li>
-        <li>地 平 线 4</li>
-        <li>帝 国 时 代</li>
-        <li>大 富 翁</li>
+    <ol class="clearfix">
+        <li>
+            <h3>
+                技 能 1
+            </h3>
+            <div class="progressBar">
+                <div class="progress">
+
+                </div>
+            </div>
+        </li>
+        <li>
+            <h3>
+                技 能 2
+            </h3>
+            <div class="progressBar">
+                <div class="progress">
+
+                </div>
+            </div>
+        </li>
+        <li>
+            <h3>
+                技 能 3
+            </h3>
+            <div class="progressBar">
+                <div class="progress">
+
+                </div>
+            </div>
+        </li>
+        <li>
+            <h3>
+                技 能 4
+            </h3>
+            <div class="progressBar">
+                <div class="progress">
+
+                </div>
+            </div>
+        </li>
+        <li>
+            <h3>
+                技 能 5
+            </h3>
+            <div class="progressBar">
+                <div class="progress">
+
+                </div>
+            </div>
+        </li>
+        <li>
+            <h3>
+                技 能 6
+            </h3>
+            <div class="progressBar">
+                <div class="progress">
+
+                </div>
+            </div>
+        </li>
     </ol>
 </section>
-<section>
+<section class="portfoilo">
     <h2>作品集</h2>
     <nav>
-        <ol>
-            <li>所有</li>
-            <li>截图</li>
-            <li>心得</li>
+        <ol class="clearfix">
+            <li id="portfoilo1">所有</li>
+            <li id="portfoilo2">截图</li>
+            <li id="portfoilo3">心得</li>
         </ol>
+        <div id="portfoiloBar" class="bar state-1">
+            <div class="bar-inner"></div>
+        </div>
+        <script>
+            portfoilo1.onclick = function () {
+                portfoiloBar.className = 'bar state-1'
+            }
+            portfoilo2.onclick = function () {
+                portfoiloBar.className = 'bar state-2'
+            }
+            portfoilo3.onclick = function () {
+                portfoiloBar.className = 'bar state-3'
+            }
+        </script>
     </nav>
     <div class="jobs">
         <div class="big"></div>
