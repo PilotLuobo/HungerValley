@@ -16,13 +16,13 @@
 </main>
 <footer></footer>
 <script>
-    var keys = {
+    keys = {
         0: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
         1: ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'],
         2: ['z', 'x', 'c', 'v', 'b', 'n', 'm'],
         length: 3
     }
-    var hash = {
+    hash = {
         'q': 'qq.com',
         'w': 'weibo.com',
         'e': 'ele.me',
@@ -52,7 +52,7 @@
     }
 
     //取出 LocalStorage 中的 xyz 对应的 hash
-    var hashInLocalStorage = json.parse(localStorage.getItem('xyz') || 'null')
+    hashInLocalStorage = JSON.parse(localStorage.getItem('xyz') || null)
     if (hashInLocalStorage) {
         hash = hashInLocalStorage
     }
