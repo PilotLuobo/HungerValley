@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>nav-demo</title>
     <link rel="stylesheet" href="./style.css" class="rel">
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -62,22 +65,38 @@
     while (index < keys['length']) {    //0 1 2
         row = keys[index]   //第一个数组 第二个数组 第三个数组
         divXXXXX = document.createElement('div')
+        divXXXXX.className = 'row'
         mainXXXXX.appendChild(divXXXXX)
         index2 = 0
         while (index2 < row['length']) {
             kbdXXXXX = document.createElement('kbd')
-            kbdXXXXX.textContent = row[index2]
+            spanXXXXX = document.createElement('span')
+            kbdXXXXX.className = 'key'
+            spanXXXXX.textContent = row[index2]
+            spanXXXXX.className = 'text'
             buttonXXXXX = document.createElement('button')
             buttonXXXXX.textContent = 'E'  //包含文本「E」
             buttonXXXXX.id = row[index2]  //让生成的 button 标签自带一个id，对应它的键
+            imgXXXXXX = document.createElement('img')
+            if (hash[row[index2]]) {
+                imgXXXXXX.src = 'http://' + hash[row[index2]] + '/favicon.ico'
+            } else {
+                imgXXXXXX.src = 'https://xiedaimala.com/favicon.ico'
+            }
+            imgXXXXXX.onerror = function (xxx) {
+                console.log('下载失败了')
+                xxx.target.src = 'https://xiedaimala.com/favicon.ico'
+            }
             buttonXXXXX.onclick = function (xzkjcnxlkcjlk) {
                 key = xzkjcnxlkcjlk['target']['id']  //拿到用户按「E」的对应的键的id.「 key = xzkjcnxlkcjlk['target'] 」表示用户点击的元素
                 x = prompt('give me a website!')  //弹出对话框，给我一个网站！！
                 hash[key] = x  //hash 变更
-                localStorage.setItem('xyz', json.stringify(hash)) //把hash以字符串的形式存到xyz里
+                localStorage.setItem('xyz', JSON.stringify(hash)) //把hash以字符串的形式存到xyz里
             }
+            kbdXXXXX.appendChild(spanXXXXX)
             divXXXXX.appendChild(kbdXXXXX)
             kbdXXXXX.appendChild(buttonXXXXX)
+            kbdXXXXX.appendChild(imgXXXXXX)
             index2++
         }
         index++
