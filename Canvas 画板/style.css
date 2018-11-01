@@ -3,13 +3,25 @@
     display: block;
 }
 
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
 
-button{
+.actions {
     position: fixed;
     left: 5px;
     bottom: 5px;
+}
+
+.actions > #brush {
+    display: none;
+}
+
+.actions.x > #brush {
+    display: inline-block;
+}
+
+.actions.x > #eraser {
+    display: none;
 }
