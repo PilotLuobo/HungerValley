@@ -8,13 +8,65 @@ var eraserEnabled = false
 /***画笔、橡皮擦开关***/
 eraser.onclick = function () {
     eraserEnabled = true
-    actions.className = 'actions x'
+    eraser.classList.add('active')
+    brush.classList.remove('active')
+
 }
 brush.onclick = function () {
     eraserEnabled = false
-    actions.className = 'actions'
+    brush.classList.add('active')
+    eraser.classList.remove('active')
+
 }
 /***画笔、橡皮擦开关***/
+
+/***改变颜色***/
+black.onclick = function () {
+    context.fillStyle = 'black'
+    context.strokeStyle='black'
+    black.classList.add('active')
+    grey.classList.remove('active')
+    red.classList.remove('active')
+    green.classList.remove('active')
+    blue.classList.remove('active')
+}
+grey.onclick = function () {
+    context.fillStyle = 'grey'
+    context.strokeStyle = 'grey'
+    grey.classList.add('active')
+    black.classList.remove('active')
+    red.classList.remove('active')
+    green.classList.remove('active')
+    blue.classList.remove('active')
+}
+red.onclick = function () {
+    context.fillStyle = 'red'
+    context.strokeStyle = 'red'
+    red.classList.add('active')
+    grey.classList.remove('active')
+    black.classList.remove('active')
+    green.classList.remove('active')
+    blue.classList.remove('active')
+}
+green.onclick = function () {
+    context.fillStyle = 'green'
+    context.strokeStyle = 'green'
+    green.classList.add('active')
+    grey.classList.remove('active')
+    red.classList.remove('active')
+    black.classList.remove('active')
+    blue.classList.remove('active')
+}
+blue.onclick = function () {
+    context.fillStyle = 'blue'
+    context.strokeStyle = 'blue'
+    blue.classList.add('active')
+    grey.classList.remove('active')
+    red.classList.remove('active')
+    green.classList.remove('active')
+    black.classList.remove('active')
+}
+/***改变颜色***/
 
 var lastPoint = {x: undefined, y: undefined}
 listenToUser(yyy)
@@ -24,7 +76,6 @@ listenToUser(yyy)
 
 function drawCircle(x, y, radius) {
     context.beginPath()
-    context.fillStyle = 'black'
     context.arc(x, y, radius, 0, Math.PI * 2)
     context.fill()
 }
@@ -33,7 +84,6 @@ function drawLine(x1, y1, x2, y2) {
     context.beginPath()
     context.moveTo(x1, y1)    //起点
     context.lineWidth = 10
-    context.strokeStyle = 'black'
     context.lineTo(x2, y2)    //终点
     context.stroke()
 }

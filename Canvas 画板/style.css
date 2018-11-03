@@ -1,5 +1,22 @@
+ol, li {
+    list-style: none;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
 #canvas {
-    background-color: green;
+    background-color: white;
     display: block;
 }
 
@@ -10,18 +27,70 @@
 
 .actions {
     position: fixed;
-    left: 5px;
-    bottom: 5px;
+    left: 0px;
+    top: 0px;
+    padding: 20px;
 }
 
-.actions > #brush {
-    display: none;
+.actions svg {
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0 10px;
 }
 
-.actions.x > #brush {
-    display: inline-block;
+.actions svg.active {
+    fill: red;
+    transform: scale(1.2);
+    transition: all 0.3s;
 }
 
-.actions.x > #eraser {
-    display: none;
+.colors {
+    position: fixed;
+    top: 60px;
+    left: 30px;
 }
+
+.colors > li {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+    margin: 10px 0;
+    transition: all 0.3s;
+}
+
+.colors > li.active {
+    transform: scale(1.2);
+}
+
+.colors > li.black {
+    background-color: black;
+}
+
+.colors > li.grey {
+    background-color: grey;
+}
+
+.colors > li.red {
+    background-color: red;
+}
+
+.colors > li.green {
+    background-color: green;
+}
+
+.colors > li.blue {
+    background-color: blue;
+}
+
+/*.actions > #brush {*/
+/*display: none;*/
+/*}*/
+
+/*.actions.x > #brush {*/
+/*display: inline-block;*/
+/*}*/
+
+/*.actions.x > #eraser {*/
+/*display: none;*/
+/*}*/
