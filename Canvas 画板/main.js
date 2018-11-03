@@ -5,6 +5,12 @@ var context = yyy.getContext('2d')
 var using = false
 var eraserEnabled = false
 
+/*******/
+document.body.addEventListener('touchmove' , function(e){
+    e.preventDefault();
+})
+/*******/
+
 /***画笔、橡皮擦开关***/
 eraser.onclick = function () {
     eraserEnabled = true
@@ -178,3 +184,4 @@ function listenToUser(canvas) {
 }
 
 /***工具函数***/
+
