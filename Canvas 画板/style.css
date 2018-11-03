@@ -18,6 +18,9 @@ ol, li {
 #canvas {
     background-color: white;
     display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
 }
 
 * {
@@ -83,14 +86,24 @@ ol, li {
     background-color: blue;
 }
 
-/*.actions > #brush {*/
-/*display: none;*/
-/*}*/
+.sizes {
+    position: fixed;
+    right: 20px;
+    top: 5px;
+}
 
-/*.actions.x > #brush {*/
-/*display: inline-block;*/
-/*}*/
+.sizes > li{
+    margin: 15px 0;
+}
 
-/*.actions.x > #eraser {*/
-/*display: none;*/
-/*}*/
+.sizes > .thin {
+    height: 0;
+    width: 20px;
+    border-top: 5px solid black;
+}
+
+.sizes > .thick {
+    height: 0;
+    width: 20px;
+    border-top: 10px solid black;
+}

@@ -4,14 +4,23 @@ var context = yyy.getContext('2d')
 
 var using = false
 var eraserEnabled = false
+context.lineWidth = 5
 
-/*******/
-document.body.addEventListener('touchmove' , function(e){
-    e.preventDefault();
-})
-/*******/
+/***防止触摸时瞎几把乱动***/
 
-/***画笔、橡皮擦开关***/
+/***防止触摸时瞎几把乱动***/
+
+/***画笔粗细***/
+thin.onclick = function () {
+    context.lineWidth = 5
+}
+
+thick.onclick = function () {
+    context.lineWidth = 10
+}
+/***画笔粗细***/
+
+/***功能键***/
 eraser.onclick = function () {
     eraserEnabled = true
     eraser.classList.add('active')
@@ -24,12 +33,24 @@ brush.onclick = function () {
     eraser.classList.remove('active')
 
 }
+clear.onclick = function () {
+    context.clearRect(0, 0, yyy.width, yyy.height)
+}
+save.onclick = function () {
+    var url = yyy.toDataURL('image/png')
+    var a = document.createElement('a')
+    document.body.appendChild(a)
+    a.href = url
+    a.download = 'my'
+    a.target = '_blank'
+    a.click()
+}
 /***画笔、橡皮擦开关***/
 
 /***改变颜色***/
 black.onclick = function () {
     context.fillStyle = 'black'
-    context.strokeStyle='black'
+    context.strokeStyle = 'black'
     black.classList.add('active')
     grey.classList.remove('active')
     red.classList.remove('active')
@@ -89,7 +110,6 @@ function drawCircle(x, y, radius) {
 function drawLine(x1, y1, x2, y2) {
     context.beginPath()
     context.moveTo(x1, y1)    //起点
-    context.lineWidth = 10
     context.lineTo(x2, y2)    //终点
     context.stroke()
 }
@@ -119,7 +139,7 @@ function listenToUser(canvas) {
                 context.clearRect(x, y, 10, 10)
             } else {
                 lastPoint = {x: x, y: y}
-                drawCircle(x, y, 5)
+                drawCircle(x, y, context.lineWidth / 2)
             }
         }
         canvas.ontouchmove = function (aaa) {
@@ -135,7 +155,7 @@ function listenToUser(canvas) {
             }
             else if (using) {
                 var newPoint = {x: x, y: y}
-                drawCircle(x, y, 5)
+                drawCircle(x, y, context.lineWidth / 2)
                 drawLine(lastPoint.x, lastPoint.y, newPoint.x, newPoint.y)
                 lastPoint = newPoint
             }
@@ -153,7 +173,7 @@ function listenToUser(canvas) {
                 context.clearRect(x, y, 10, 10)
             } else {
                 lastPoint = {x: x, y: y}
-                drawCircle(x, y, 5)
+                drawCircle(x, y, context.lineWidth / 2)
             }
         }
 
@@ -170,7 +190,7 @@ function listenToUser(canvas) {
             }
             else if (using) {
                 var newPoint = {x: x, y: y}
-                drawCircle(x, y, 5)
+                drawCircle(x, y, context.lineWidth / 2)
                 drawLine(lastPoint.x, lastPoint.y, newPoint.x, newPoint.y)
                 lastPoint = newPoint
             }
