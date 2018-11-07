@@ -54,20 +54,20 @@ a {
     padding-bottom: 4px;
 }
 
-.topNavBar nav > ul {
+.topNavBar nav>ul {
     list-style: none;
     margin: 0px;
     padding: 0px;
 }
 
-.topNavBar nav > ul > li {
+.topNavBar nav>ul>li {
     float: left;
     margin-left: 17px;
     margin-right: 17px;
     position: relative;
 }
 
-.topNavBar nav > ul > li > a {
+.topNavBar nav>ul>li>a {
     font-size: 12px;
     font-weight: bold;
     border-top: 3px solid transparent;
@@ -78,7 +78,7 @@ a {
     position: relative;
 }
 
-.topNavBar nav > ul > li > a:hover::after {
+.topNavBar nav>ul>li.active>a::after {
     /*border-bottom: 3px solid #e06567;*/
     content: '';
     display: block;
@@ -103,16 +103,30 @@ a {
 .topNavBar .subMenu {
     display: none;
     position: absolute;
-    left: 0;
+    right: 0;
     top: 100%;
+    background: white;
+    color: #3d4451;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
 }
 
-.topNavBar .subMenu.active {
+.topNavBar li.active>.subMenu {
     display: block;
+    animation: subMenuSlide 0.3s;
 }
 
-.topNavBar .subMenu > li {
+@keyframes subMenuSlide {
+    0% {
+        margin-right: 100%;
+    }
+    100% {
+        margin-right: 0%;
+    }
+}
+
+.topNavBar .subMenu>li {
     white-space: nowrap;
+    padding: 5px 10px;
 }
 
 .topNavBar .logo {
@@ -226,7 +240,7 @@ hr {
     text-align: center;
 }
 
-.userCard footer.media > a {
+.userCard footer.media>a {
     /*border: 1px solid black;*/
     display: inline-block;
     border-radius: 50%;
@@ -237,7 +251,7 @@ hr {
     transition: all 0.5s;
 }
 
-.userCard footer.media > a:hover {
+.userCard footer.media>a:hover {
     background: #CF5D5F;
 }
 
@@ -252,11 +266,11 @@ main {
     margin-top: -340px;
 }
 
-body > main .dlresumet-wrapper {
+body>main .dlresumet-wrapper {
     text-align: center;
 }
 
-body > main .dlresumet {
+body>main .dlresumet {
     font-size: 14px;
     line-height: 16px;
     padding: 21px 55px;
@@ -284,8 +298,7 @@ body > main .dlresumet {
     font-size: 18px;
 }
 
-section.skills,
-section.portfoilo {
+section.skills, section.portfoilo {
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
@@ -296,8 +309,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-section.skills > h2,
-section.portfoilo > h2 {
+section.skills>h2, section.portfoilo>h2 {
     text-align: center;
     color: #3d4451;
     font-size: 34px;
@@ -311,19 +323,19 @@ section.skills h3 {
     padding-right: 40px;
 }
 
-section.skills > ol {
+section.skills>ol {
     background-color: #FFFFFF;
     box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.5);
     padding: 42px 50px 10px;
     margin-top: 30px;
 }
 
-section.skills > ol > li {
+section.skills>ol>li {
     float: left;
     width: 48%;
 }
 
-section.skills > ol > li:nth-child(even) {
+section.skills>ol>li:nth-child(even) {
     float: right;
 }
 
@@ -346,23 +358,23 @@ section.portfoilo {
     margin-bottom: 100px;
 }
 
-section.portfoilo > nav {
+section.portfoilo>nav {
     text-align: center;
     margin-top: 32px;
 }
 
-section.portfoilo > nav > ol {
+section.portfoilo>nav>ol {
     display: inline-block;
     vertical-align: text-top;
 }
 
-section.portfoilo > nav > ol > li {
+section.portfoilo>nav>ol>li {
     float: left;
     margin-left: 40px;
     cursor: pointer;
 }
 
-section.portfoilo > nav > ol > li:nth-child(1) {
+section.portfoilo>nav>ol>li:nth-child(1) {
     margin-left: 0;
 }
 
@@ -407,10 +419,7 @@ section.portfoilo .works {
     height: 546px;
 }
 
-section.portfoilo .works .work1,
-section.portfoilo .works .work2,
-section.portfoilo .works .work3,
-section.portfoilo .works .work4 {
+section.portfoilo .works .work1, section.portfoilo .works .work2, section.portfoilo .works .work3, section.portfoilo .works .work4 {
     position: absolute;
 }
 
@@ -433,4 +442,3 @@ section.portfoilo .works .work4 {
     top: 293px;
     left: 490px;
 }
-

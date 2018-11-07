@@ -50,13 +50,13 @@
             <a href="#" class="logo" alt="logo" style="float: left;">
                 <span class="rs">RS</span><span class="card">card</span>
             </a>
-            <nav style="float: right;">
+            <nav class="menu" style="float: right;">
                 <ul class="clearfix">
                     <li>
                         <a href="#">关于我</a>
                     </li>
                     <li>
-                        <a class="menuTigger" href="#">作品集</a>
+                        <a href="#">作品集</a>
                         <ul class="subMenu">
                             <li>作品1</li>
                             <li>作品2</li>
@@ -67,7 +67,7 @@
                         <a href="#">项目经历</a>
                     </li>
                     <li>
-                        <a class="menuTigger" href="#">工作经历</a>
+                        <a href="#">工作经历</a>
                         <ul class="subMenu">
                             <li>工作经历1</li>
                             <li>工作经历2</li>
@@ -274,7 +274,18 @@
                 topNavBar.classList.remove('sticky')
             }
         }
-        let aTags = document.getElementsByClassName('menuTigger')
+
+        let liTags = document.querySelectorAll('nav.menu > ul > li')
+
+        for (let i = 0; i < liTags.length; i++) {
+            liTags[i].onmouseenter = function (x) {
+                x.currentTarget.classList.add('active')
+            }
+            liTags[i].onmouseleave = function (x) {
+                x.currentTarget.classList.remove('active')
+            }
+        }
+
     </script>
 </body>
 
