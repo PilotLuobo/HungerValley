@@ -56,7 +56,7 @@ kbd {
     margin: 0 10px;
 }
 
-kbd > button {
+kbd>button {
     position: absolute;
     right: 4px;
     bottom: 4px;
@@ -64,7 +64,7 @@ kbd > button {
     display: none;
 }
 
-kbd:hover > button {
+kbd:hover>button {
     display: inline-block;
 }
 
@@ -85,10 +85,10 @@ main {
     display: inline-block;
 }
 
-#mainXXXXX > div:nth-child(2) {
+#mainXXXXX>div:nth-child(2) {
     margin-left: -22px;
 }
 
-#mainXXXXX > div:nth-child(3) {
+#mainXXXXX>div:nth-child(3) {
     margin-left: -80px;
 }
