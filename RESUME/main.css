@@ -28,11 +28,21 @@ a {
 }
 
 .topNavBar {
+    color: #b7b7b7;
     padding: 20px 0px 20px 0px;
     position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
+    transition: all 0.5s;
+}
+
+.topNavBar.sticky {
+    background: white;
+    padding: 10px 0;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: #3d4451;
 }
 
 .topNavBar-inner {
@@ -54,21 +64,55 @@ a {
     float: left;
     margin-left: 17px;
     margin-right: 17px;
+    position: relative;
 }
 
 .topNavBar nav > ul > li > a {
     font-size: 12px;
-    color: #b7b7b7;
     font-weight: bold;
     border-top: 3px solid transparent;
     border-bottom: 3px solid transparent;
     padding-top: 5px;
     padding-bottom: 5px;
     display: block;
+    position: relative;
 }
 
-.topNavBar nav > ul > li > a:hover {
-    border-bottom: 3px solid #e06567;
+.topNavBar nav > ul > li > a:hover::after {
+    /*border-bottom: 3px solid #e06567;*/
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #e06567;
+    height: 3px;
+    animation: menuSlide 0.25s;
+}
+
+@keyframes menuSlide {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.topNavBar .subMenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+}
+
+.topNavBar .subMenu.active {
+    display: block;
+}
+
+.topNavBar .subMenu > li {
+    white-space: nowrap;
 }
 
 .topNavBar .logo {
@@ -190,6 +234,7 @@ hr {
     line-height: 30px;
     padding: 5px 0;
     margin: 16px;
+    transition: all 0.5s;
 }
 
 .userCard footer.media > a:hover {
@@ -389,44 +434,3 @@ section.portfoilo .works .work4 {
     left: 490px;
 }
 
-/***loading动画***/
-.loading {
-    width: 200px;
-    height: 200px;
-    border: 1px solid red;
-    position: relative;
-}
-
-.loading::before, .loading::after {
-    content: '';
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: #000;
-    border-radius: 50%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    animation: loadingAnimation 1s linear infinite;
-}
-
-.loading::after {
-    animation-delay: 0.5s;
-}
-
-@keyframes loadingAnimation {
-    0% {
-        width: 0;
-        height: 0;
-        opacity: 1;
-    }
-    100% {
-        width: 100px;
-        height: 100px;
-        opacity: 0;
-    }
-}
-
-/***loading动画***/
