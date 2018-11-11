@@ -1,444 +1,437 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0
 }
 
-ul, ol {
-    list-style: none;
+ol, ul {
+    list-style: none
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
+    font-weight: 400
 }
 
 body {
-    background-color: #EFEFEF;
     margin: 0;
+    background-color: #efefef
 }
 
 a {
     color: inherit;
-    text-decoration: none;
+    text-decoration: none
 }
 
-.clearfix::after {
-    content: '';
-    display: block;
+.clearfix:after {
     clear: both;
+    display: block;
+    content: ''
 }
 
 .topNavBar {
-    color: #b7b7b7;
-    padding: 20px 0px 20px 0px;
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
+    padding: 20px 0;
     width: 100%;
-    transition: all 0.5s;
+    color: #b7b7b7;
+    transition: all .5s
 }
 
 .topNavBar.sticky {
-    background: white;
-    padding: 10px 0;
     z-index: 1;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    color: #3d4451;
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+    color: #3d4451
 }
 
 .topNavBar-inner {
-    padding: 0 16px 0 16px;
+    padding: 0 1pc
 }
 
 .topNavBar nav {
     padding-top: 3px;
-    padding-bottom: 4px;
+    padding-bottom: 4px
 }
 
 .topNavBar nav>ul {
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    list-style: none
 }
 
 .topNavBar nav>ul>li {
-    float: left;
-    margin-left: 17px;
-    margin-right: 17px;
     position: relative;
+    float: left;
+    margin-right: 17px;
+    margin-left: 17px
 }
 
 .topNavBar nav>ul>li>a {
-    font-size: 12px;
-    font-weight: bold;
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent;
+    position: relative;
+    display: block;
     padding-top: 5px;
     padding-bottom: 5px;
-    display: block;
-    position: relative;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    font-weight: 700;
+    font-size: 9pt
 }
 
-.topNavBar nav>ul>li.active>a::after {
-    /*border-bottom: 3px solid #e06567;*/
-    content: '';
-    display: block;
+.topNavBar nav>ul>li.active>a:after {
     position: absolute;
     top: 100%;
     left: 0;
+    display: block;
     width: 100%;
-    background: #e06567;
     height: 3px;
-    animation: menuSlide 0.25s;
+    background: #e06567;
+    content: '';
+    animation: menuSlide .25s
 }
 
 @keyframes menuSlide {
     0% {
-        width: 0;
+        width: 0
     }
-    100% {
-        width: 100%;
+    to {
+        width: 100%
     }
 }
 
 .topNavBar .subMenu {
-    display: none;
     position: absolute;
-    right: 0;
     top: 100%;
-    background: white;
-    color: #3d4451;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+    right: 0;
+    display: none;
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .25);
+    color: #3d4451
 }
 
 .topNavBar li.active>.subMenu {
     display: block;
-    animation: subMenuSlide 0.3s;
+    animation: subMenuSlide .3s
 }
 
 @keyframes subMenuSlide {
     0% {
-        margin-right: 100%;
+        margin-right: 100%
     }
-    100% {
-        margin-right: 0%;
+    to {
+        margin-right: 0
     }
 }
 
 .topNavBar .subMenu>li {
-    white-space: nowrap;
     padding: 5px 10px;
+    white-space: nowrap
 }
 
 .topNavBar .logo {
-    font-size: 24px;
-    font-family: "Arial Black";
     padding-top: 3px;
     padding-bottom: 4px;
+    font-size: 24px;
+    font-family: Arial #000
 }
 
 .topNavBar .logo .rs {
     margin-right: 4px;
-    color: #E6686A;
+    color: #e6686a
 }
 
 .topNavBar .logo .card {
-    color: #9A9DA2;
+    color: #9a9da2
 }
 
 .banner {
     height: 515px;
-    background-image: url(./img/wallhaven-699897.jpg);
+    background-image: url(img/wallhaven-699897.jpg);
     background-position: center top;
-    background-size: cover;
+    background-size: cover
 }
 
 .banner .mask {
     height: 515px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, .5)
 }
 
 .userCard {
-    /*border: 1px solid red;*/
-    max-width: 940px;
-    margin-left: auto;
     margin-right: auto;
-    background-color: #FFFFFF;
-    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    margin-left: auto;
+    max-width: 940px;
+    background-color: #fff;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .5)
 }
 
 .userCard .welcome {
-    background-color: #E6686A;
-    color: #FFFFFF;
-    display: inline-block;
-    padding: 4px 16px;
-    line-height: 22px;
     position: relative;
+    display: inline-block;
     margin-bottom: 10px;
-    /*width: 70px;*/
-    /*height: 29px;*/
-    /*line-height: 29px;*/
-    /*text-align: center;*/
+    padding: 4px 1pc;
+    background-color: #e6686a;
+    color: #fff;
+    line-height: 22px
 }
 
 .userCard .welcome .triangle {
-    display: inline-block;
-    border: 10px solid transparent;
-    width: 0px;
-    border-left-color: #E6686A;
-    border-top-width: 0px;
     position: absolute;
-    left: 4px;
     top: 100%;
+    left: 4px;
+    display: inline-block;
+    width: 0;
+    border: 10px solid transparent;
+    border-left-color: #e6686a;
+    border-top-width: 0
 }
 
 .userCard .picture {
-    float: left;
+    float: left
 }
 
 .userCard .text {
     float: left;
     margin-left: 62px;
-    width: 400px;
-    font-family: cursive;
+    width: 25pc;
+    font-family: cursive
 }
 
 hr {
-    height: 0px;
+    height: 0;
     border: none;
-    border-top: 1px solid #DEDEDE;
+    border-top: 1px solid #dedede
 }
 
 .PictureAndText {
-    padding: 50px 50px;
+    padding: 50px
 }
 
 .userCard .text h1 {
-    margin-top: 18px;
+    margin-top: 18px
 }
 
 .userCard .text hr {
-    margin: 20px 0px;
+    margin: 20px 0
 }
 
 .userCard dl dt, dd {
     float: left;
-    padding: 6px 0;
+    padding: 6px 0
 }
 
 .userCard dl dt {
     width: 30%;
-    font-weight: bold;
+    font-weight: 700
 }
 
 .userCard dl dd {
     width: 70%;
-    color: #9da0a2;
+    color: #9da0a2
 }
 
 .userCard footer.media {
-    background: #E6686A;
-    text-align: center;
+    background: #e6686a;
+    text-align: center
 }
 
 .userCard footer.media>a {
-    /*border: 1px solid black;*/
     display: inline-block;
-    border-radius: 50%;
-    width: 40px;
-    line-height: 30px;
+    margin: 1pc;
     padding: 5px 0;
-    margin: 16px;
-    transition: all 0.5s;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 30px;
+    transition: all .5s
 }
 
 .userCard footer.media>a:hover {
-    background: #CF5D5F;
+    background: #cf5d5f
 }
 
 .userCard svg {
     width: 30px;
     height: 30px;
-    fill: white;
     vertical-align: top;
+    fill: #fff
 }
 
 main {
-    margin-top: -340px;
+    margin-top: -340px
 }
 
 body>main .dlresumet-wrapper {
-    text-align: center;
+    text-align: center
 }
 
 body>main .dlresumet {
-    font-size: 14px;
-    line-height: 16px;
-    padding: 21px 55px;
     display: inline-block;
-    border: 1px solid #CDCFD1;
-    background: #EFEFEF;
+    margin: 2pc 0;
+    padding: 21px 55px;
+    border: 1px solid #cdcfd1;
     border-radius: 5px;
+    background: #efefef;
     color: #3d4451;
-    font-weight: bold;
-    margin: 32px 0;
-    transition: box-shadow 0.3s;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1pc;
+    transition: box-shadow .3s
 }
 
 .dlresumet:hover {
-    box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 13px 0 rgba(0, 0, 0, .5)
 }
 
 .selfIntroduction {
-    max-width: 940px;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
+    max-width: 940px;
     text-align: center;
-    font-family: cursive;
-    line-height: 1.8;
     font-size: 18px;
+    font-family: cursive;
+    line-height: 1.8
 }
 
-section.skills, section.portfoilo {
-    max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
+section.portfoilo, section.skills {
     margin-top: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 940px
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
+    font-weight: 700
 }
 
-section.skills>h2, section.portfoilo>h2 {
-    text-align: center;
+section.portfoilo>h2, section.skills>h2 {
     color: #3d4451;
-    font-size: 34px;
-    line-height: 1.2;
+    text-align: center;
     font-weight: 600;
+    font-size: 34px;
+    line-height: 1.2
 }
 
 section.skills h3 {
-    font-size: 14px;
-    line-height: 1.1;
     padding-right: 40px;
+    font-size: 14px;
+    line-height: 1.1
 }
 
 section.skills>ol {
-    background-color: #FFFFFF;
-    box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.5);
-    padding: 42px 50px 10px;
     margin-top: 30px;
+    padding: 42px 50px 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 13px 0 rgba(0, 0, 0, .5)
 }
 
 section.skills>ol>li {
     float: left;
-    width: 48%;
+    width: 48%
 }
 
 section.skills>ol>li:nth-child(even) {
-    float: right;
+    float: right
 }
 
 section.skills .progressBar {
+    margin: 4px 0 40px;
     height: 5px;
-    background-color: #fce2df;
     border-radius: 10px;
-    margin: 4px 0 40px 0;
+    background-color: #fce2df
 }
 
 section.skills .progressBar .progress {
-    height: 100%;
-    background-color: red;
     width: 50%;
+    height: 100%;
     border-radius: 10px;
+    background-color: red
 }
 
 section.portfoilo {
-    text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 75pt;
+    text-align: center
 }
 
 section.portfoilo>nav {
-    text-align: center;
-    margin-top: 32px;
+    margin-top: 2pc;
+    text-align: center
 }
 
 section.portfoilo>nav>ol {
     display: inline-block;
-    vertical-align: text-top;
+    vertical-align: text-top
 }
 
 section.portfoilo>nav>ol>li {
     float: left;
     margin-left: 40px;
-    cursor: pointer;
+    cursor: pointer
 }
 
 section.portfoilo>nav>ol>li:nth-child(1) {
-    margin-left: 0;
+    margin-left: 0
 }
 
 section.portfoilo nav .bar {
-    height: 5px;
-    background-color: white;
     margin-top: 5px;
     margin-bottom: 30px;
+    height: 5px;
     border-radius: 10px;
+    background-color: #fff
 }
 
 section.portfoilo nav .bar .bar-inner {
-    height: 100%;
-    background-color: #E6686A;
     width: 10%;
+    height: 100%;
     border-radius: 10px;
-    transition: all 0.5s;
+    background-color: #e6686a;
+    transition: all .5s
 }
 
 section.portfoilo nav .bar.state-1 .bar-inner {
-    margin-left: 0px;
-    width: 33px;
+    margin-left: 0;
+    width: 33px
 }
 
 section.portfoilo nav .bar.state-2 .bar-inner {
     margin-left: 70px;
-    width: 35px;
+    width: 35px
 }
 
 section.portfoilo nav .bar.state-3 .bar-inner {
     margin-left: 142px;
-    width: 34px;
+    width: 34px
 }
 
 section.portfoilo nav {
     display: inline-block;
-    vertical-align: text-top;
+    vertical-align: text-top
 }
 
 section.portfoilo .works {
     position: relative;
-    height: 546px;
+    height: 546px
 }
 
 section.portfoilo .works .work1, section.portfoilo .works .work2, section.portfoilo .works .work3, section.portfoilo .works .work4 {
-    position: absolute;
+    position: absolute
 }
 
 section.portfoilo .works .work1 {
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0
 }
 
 section.portfoilo .works .work2 {
-    top: 0px;
-    left: 490px;
+    top: 0;
+    left: 490px
 }
 
 section.portfoilo .works .work3 {
     top: 293px;
-    left: 0px;
+    left: 0
 }
 
 section.portfoilo .works .work4 {
     top: 293px;
-    left: 490px;
+    left: 490px
 }
