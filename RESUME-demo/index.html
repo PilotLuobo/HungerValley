@@ -262,6 +262,7 @@
             </div>
         </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
     <script>
         setTimeout(function () {
             loadingAnimation.classList.remove('active')
@@ -276,6 +277,12 @@
         }
 
         let liTags = document.querySelectorAll('nav.menu > ul > li')
+
+        function animate(time) {
+            requestAnimationFrame(animate)
+            TWEEN.update(time)
+        }
+        requestAnimationFrame(animate)
 
         for (let i = 0; i < liTags.length; i++) {
             liTags[i].onmouseenter = function (x) {
@@ -294,7 +301,18 @@
                 let href = a.getAttribute('href')
                 let element = document.querySelector(href)
                 let top = element.offsetTop
-                window.scrollTo(0, top - 80)
+
+                let currentTop = window.scrollY
+                let targetTop = top - 80
+
+                var coords = { y: currentTop }
+                var tween = new TWEEN.Tween(coords)
+                    .to({ y: targetTop }, 1000)
+                    .easing(TWEEN.Easing.Bounce.Out)
+                    .onUpdate(function () {
+                        window.scrollTo(0,coords.y)
+                    })
+                    .start()
             }
         }
     </script>
