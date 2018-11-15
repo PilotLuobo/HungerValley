@@ -274,7 +274,10 @@
             } else {
                 topNavBar.classList.remove('sticky')
             }
+            console.log(window.scrollY)
         }
+
+
 
         let liTags = document.querySelectorAll('nav.menu > ul > li')
 
@@ -293,7 +296,6 @@
             }
         }
         let aTags = document.querySelectorAll('nav.menu > ul > li > a')
-        console.log(aTags)
         for (i = 0; i < aTags.length; i++) {
             aTags[i].onclick = function (x) {
                 x.preventDefault()
@@ -310,7 +312,7 @@
                     .to({ y: targetTop }, 1000)
                     .easing(TWEEN.Easing.Bounce.Out)
                     .onUpdate(function () {
-                        window.scrollTo(0,coords.y)
+                        window.scrollTo(0, coords.y)
                     })
                     .start()
             }
