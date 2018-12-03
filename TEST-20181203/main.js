@@ -12,37 +12,33 @@ window.jQuery = function (nodeOrSelector) {
             length: 1
         }
     }
-    console.log(nodes)
     nodes.addClass = function (classes) {
-        let value = {}
-        if (typeof classes === 'String') {
-            value = {
-                0: classes,
-                length: 1
-            }
-        } else if (typeof classes === 'Object') {
+        var value2 = {}
+        if (typeof classes === 'string') {
+            value2 = [classes]
+        } else if (typeof classes === 'object') {
             for (let i = 0; i < classes.length; i++) {
-                value[i] = classes[i]
+                value2[i] = classes[i]
             }
+            value2.length = classes.length
         }
-        value.forEach((value) => {
-            for (let i = 0; i < nodes.length; i++) {
-                nodes[i].classList.add(value)
-            }
-        })
+        for (let i = 0; i < nodes.length; i++) {
+            nodes[i].classList.add(value)
+        }
+        value2.length = 1
     }
+
 
     nodes.setText = function (text) {
         for (let i = 0; i < nodes.length; i++) {
             nodes[i].textContent = text
         }
     }
-
     return nodes
+
 }
 window.$ = jQuery
 
-var $div = $('div')
+var $div = jQuery('div')
 $div.addClass('red') // 可将所有 div 的 class 添加一个 red
 $div.setText('hi') // 可将所有 div 的 textContent 变为 hi
-console.log($div)
