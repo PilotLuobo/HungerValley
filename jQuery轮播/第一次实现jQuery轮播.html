@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第一次实现jQuery轮播</title>
+    <style>
+        .images {
+            display: flex;
+            align-items: flex-start;
+            transition: all 0.5s;
+        }
+
+        /*.images > img {*/
+        /*border: 1px solid red;*/
+        /*}*/
+
+        .window {
+            width: 480px;
+            overflow: hidden;
+        }
+
+        .spans > span {
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="window">
+    <div id='images' class="images">
+        <img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fxw3wgx5roj31hc0u0ae3.jpg" width=480px alt="">
+        <img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fxw3wt6g6aj31hc0u0jta.jpg" width=480px alt="">
+        <img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fxw3x2z7ibj31hc0u0dnm.jpg" width=480px alt="">
+        <img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fxw3x9o9ffj31hc0u0wmg.jpg" width=480px alt="">
+    </div>
+</div>
+<div class="spans">
+    <span>p1</span>
+    <span>p2</span>
+    <span>p3</span>
+    <span>p4</span>
+</div>
+
+</body>
+<script>
+    var allButtons = $('.spans > span')
+    for (let i = 0; i < allButtons.length; i++) {
+        $(allButtons[i]).on('click', function (x) {
+            var index = $(x.currentTarget).index()
+            var distance = index * -480
+            $('#images').css({
+                transform: 'translate(' + distance + 'px)'
+            })
+            picTimer = index
+            allButtons.eq(index).addClass('red').siblings('.red').removeClass('red')
+        })
+    }
+
+    var picTimer = 0
+    allButtons.eq(picTimer % 4).trigger('click').addClass('red').siblings('.red').removeClass('red')
+    var timer = setInterval(() => {
+        picTimer += 1
+        allButtons.eq(picTimer % 4).trigger('click').addClass('red').siblings('.red').removeClass('red')
+    }, 1500)
+
+    $('.window').on('mouseenter', function () {
+        window.clearInterval(timer)
+    })
+
+    $('.window').on('mouseleave', function () {
+        timer = setInterval(() => {
+            picTimer += 1
+            allButtons.eq(picTimer % 4).trigger('click').addClass('red').siblings('.red').removeClass('red')
+        }, 1500)
+    })
+</script>
+</html>

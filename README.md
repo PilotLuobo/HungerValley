@@ -11,3 +11,5 @@
 5. 太极阴阳图（纯css实现）
 6. nav-demo
 7. Canvas画板
+8. 实现jQuery的一个API功能
+9. jQuery轮播
