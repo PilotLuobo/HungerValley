@@ -1,0 +1,18 @@
+body{
+    border:1px solid red;
+  }
+  .wrapper{
+    position: relative;
+    display:inline-block;
+  }
+  .popover{
+    border:1px solid green;
+    position:absolute;
+    left:100%;
+    top:0;
+    white-space:nowrap;
+    padding:10px;
+    margin-left:10px;
+    background: white;
+    display:none
+  }

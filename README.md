@@ -14,3 +14,4 @@
 8. 实现jQuery的一个API功能
 9. jQuery轮播
 10. jQuery无缝轮播
+11. 点击别处关闭浮层
