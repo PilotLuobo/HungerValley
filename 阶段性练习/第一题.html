@@ -1,10 +1,20 @@
+<!--页面中有一个 SVG 标签，SVG 里面有一个直径为 100 像素的圆圈，颜色随意-->
+<!--注意题目中的路径-->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>我的页面</title>
+    <link rel="stylesheet" href="./style.css" class="rel">
+    <link rel="stylesheet" href="./print.css" class="rel" media="print">
+    <link rel="stylesheet" href="./mobile.css" class="rel" media="(max-width:500px)">
 </head>
 <body>
-
+<svg>
+    <circle cx="250" cy="75" r="50" fill="green"/>
+</svg>
+<script src="./main.js"></script>
+<script type="text/javascript" language="javascript" src="./gbk.js"></script>
 </body>
 </html>
