@@ -1,44 +1,100 @@
-*{
+/*
+ * 初始化
+ */
+
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-header{
-    border: 1px solid red;
+/*
+ * 项目标题
+ */
+
+header {
     font-size: 45px;
     text-align: center
 }
 
-main{
-    border: 1px solid blue;
+/*
+ * 轮播图部分
+ */
+
+main {
     margin: 32px 0;
 }
 
-main > .wrapper{
-    max-width: 925px;
-    white-space: nowrap;
-left: 0;
-right:0;
-top:0;
-bottom: 0;
+main>.wrapper {
+    width: 925px;
+    margin: 0 auto;
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    box-shadow: 2px 2px 32px 4px rgba(0, 0, 0, 0.6);
 }
 
 .pic {
-    border: 1px solid red;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.images {
     width: 925px;
     overflow: hidden;
 }
-.images {
 
+.wrapper-opts {
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    height: 45px;
+    background: #edecec;
+    text-align: center;
+    font-size: 0px;
 }
 
+.wrapper-opts>a {
+    display: inline-block;
+    border-left: 1px solid rgb(224, 224, 224);
+    border-right: 1px solid rgb(224, 224, 224);
+    width: 60px;
+    line-height: 44px;
+    transition: all .5s
+}
 
-footer{
+.wrapper-opts>a:hover {
+    background: #cf5d5f;
+}
+
+.wrapper-opts>a.active {
+    background: grey;
+    position: relative;
+}
+
+.wrapper-opts>a.active::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 4px 0 4px;
+    border-color: white transparent transparent transparent;
+    position: absolute;
+    left: 26px;
+}
+
+.wrapper-opts>a>img {
+    vertical-align: middle;
+}
+
+/*
+ * 底部说明文字
+ */
+
+footer {
     text-align: center;
     text-decoration: none;
-    border: 1px solid red;
 }
-footer > .link{
+
+footer>.link {
     background: #d2ecff;
     border-radius: 0.5em;
 }
