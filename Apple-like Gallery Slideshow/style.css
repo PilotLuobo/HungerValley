@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    border: 1px solid red;
+    font-size: 45px;
+    text-align: center
+}
+
+main{
+    border: 1px solid blue;
+    margin: 32px 0;
+}
+
+main > .wrapper{
+    max-width: 925px;
+    white-space: nowrap;
+left: 0;
+right:0;
+top:0;
+bottom: 0;
+}
+
+.pic {
+    border: 1px solid red;
+    width: 925px;
+    overflow: hidden;
+}
+.images {
+
+}
+
+
+footer{
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid red;
+}
+footer > .link{
+    background: #d2ecff;
+    border-radius: 0.5em;
+}
