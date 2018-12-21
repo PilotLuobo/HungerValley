@@ -36,11 +36,16 @@ main>.wrapper {
 .pic {
     width: 100%;
     white-space: nowrap;
+    transition: all 0.5s;
+    overflow: hidden;
 }
 
 .images {
+    display: flex;
+    align-items: flex-start;
+    transition: all 0.5s;
     width: 925px;
-    overflow: hidden;
+
 }
 
 .wrapper-opts {
@@ -58,7 +63,7 @@ main>.wrapper {
     border-right: 1px solid rgb(224, 224, 224);
     width: 60px;
     line-height: 44px;
-    transition: all .5s
+    transition: all .1s
 }
 
 .wrapper-opts>a:hover {
@@ -84,6 +89,7 @@ main>.wrapper {
 .wrapper-opts>a>img {
     vertical-align: middle;
 }
+
 
 /*
  * 底部说明文字
